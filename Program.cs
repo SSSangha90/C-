@@ -4,29 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hello
+namespace HelloCalculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter your name");
-            string name = Console.ReadLine();
+            int result = AddNumbers(64, 32);
+            Console.WriteLine(result);
+            Console.WriteLine(AddNumbers(-1, 32));
+            Console.ReadKey();
+        }
 
-            Console.WriteLine("How much sleep did you get last night");
-            int hoursOfSleep = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Hello, " + name);
-
-            if(hoursOfSleep < 8)
-            {
-                Console.WriteLine("You must feel tired");
-            }
-            else
-            {
-                Console.WriteLine("You seem well rested.");
-            }
+        private static int AddNumbers(int numberOne, int numberTwo)
+        {
+            int CalculationResult;
+            CalculationResult = numberOne + numberTwo;
+            return CalculationResult;
         }
     }
 }
-
